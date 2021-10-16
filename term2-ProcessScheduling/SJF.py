@@ -60,6 +60,7 @@ while(len(SJFQueue) >0):
             SJFQueue[i] = SJFQueue[-1]
             SJFQueue[-1] = temp
 
+    print(f'P{SJFQueue[0].id} : {SJFQueue[0].burst_time}')
     if(SJFQueue[0].burst_time == 0):
         print(f'P{SJFQueue[0].id} Process end')
         endList.append(SJFQueue[0])
@@ -75,7 +76,7 @@ while(len(SJFQueue) >0):
     time+=1
     if(len(SJFQueue)!= 0):
         SJFQueue[0].burst_time -= 1
-        print(f'P{SJFQueue[0].id} : {SJFQueue[0].burst_time}')
+        
         print(f'time: {time}')
     
 
