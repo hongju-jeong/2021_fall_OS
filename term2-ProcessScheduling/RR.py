@@ -42,11 +42,7 @@ while(len(RRQueue) >0):
     
     
 
-    for i in list:
-        if(i.arrival_time == time):
-            print(f'P{i.id} Process arrival')
-            RRQueue.append(i)
-            del i
+    
 
     if (time_quantum == 3):
         if(RRQueue[0].burst_time ==0):
@@ -85,6 +81,12 @@ while(len(RRQueue) >0):
     if(len(RRQueue)!= 0):
         RRQueue[0].burst_time -= 1
         print(f'time: {time}, time_quantum: {time_quantum}')
+
+    for i in list:
+        if(i.arrival_time == time):
+            print(f'P{i.id} Process arrival')
+            RRQueue.append(i)
+            del i
     
 
 
